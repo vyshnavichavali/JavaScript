@@ -109,6 +109,8 @@ console.log(`Tax(10%):$${tax}`);
     <script>
       let calculation = "";
     </script>
+</body>
+</html>
 
 
 
