@@ -9,63 +9,67 @@ console.log(`Tax(10%):$${tax}`);
 // Simple Add to cart code(JS in html code)
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cart Quantity</title>
-    <meta charset="UTF-8" />
-  </head>
-<body>
-<h4>Cart Quantity</h4>
-    <button onclick='
-    cartQuantity=0; 
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>Show Quantity</button>
+    <head>
+        <title>Cart Quantity</title>
+    </head>
+    <body>
+        <h4>Cart Quantity</h4>
+        <script>
+            let cartQuantity=0
+        </script>
+        <button onclick='
+        cartQuantity=0; 
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>Show Quantity</button>
 
-    <button onclick='
-    cartQuantity+=1;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>Add to cart</button>
+        <button onclick='
+        cartQuantity+=1;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>Add to cart</button>
 
-    <button onclick='
-    cartQuantity+=2;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>+2</button>
+        <button onclick='
+        cartQuantity+=2;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>+2</button>
 
-    <button onclick='
-    cartQuantity+=3;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>+3</button>
+        <button onclick='
+        cartQuantity+=3;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>+3</button>
 
-    <button onclick='
-    cartQuantity+=4;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>+4</button>
+        <button onclick='
+        cartQuantity+=4;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>+4</button>
 
-    <button onclick='
-    cartQuantity+=5;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>+5</button>
+        <button onclick='
+        cartQuantity+=5;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>+5</button>
 
-    <button onclick='
-    cartQuantity--;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>Remove from cart</button>
+        <button onclick='
+        cartQuantity--;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>Remove from cart</button>
 
-    <button onclick='
-    cartQuantity-=2;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>-2</button>
+        <button onclick='
+        cartQuantity-=2;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>-2</button>
 
-    <button onclick='
-    cartQuantity-=3;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>-3</button>
+        <button onclick='
+        cartQuantity-=3;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>-3</button>
 
-    <button onclick='
-    cartQuantity=0;
-    console.log(`cartQuantity: ${cartQuantity}`);
-    '>Reset Cart</button>
-  </body>
+        <button onclick='
+        cartQuantity=0;
+        console.log(`cartQuantity: ${cartQuantity}`);
+        '>Reset Cart</button>
+
+    </body>
 </html>
+
 
 // Simple calculator code
 <!DOCTYPE html>
