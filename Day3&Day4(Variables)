@@ -119,6 +119,79 @@ console.log(`Tax(10%):$${tax}`);
 </body>
 </html>
 
+//  Difference between var, let and const
+/*var is nothing but variable 
+var can reassign
+var can redeclare
+var can hoisted 
+var can binds this
+var has no scope
+*/
+// var can redeclare
+var num = 3
+console.log(num)
+var num = 4
+console.log(num)
+
+// var can reassign
+var num1= 3
+num1 = 4
+console.log(num1);  // we will get updated value
+
+// var can hoisted : we can use the variable without declaring it
+console.log(val);    // output: undefined
+var val = 2;
+console.log(val);    // output: 2
+
+// var can binds this
+
+
+
+
+
+/* let is used to declare the variable
+   let cannot be redclare but can redecalre in another block
+   let can reassign
+   let can't hoisted
+   let can't bind this
+   let has the scope
+*/
+
+// let cannot be redclare but can redecalre in another block
+
+var val1 = 3  // Allowed
+var val1 = 4 // Not Allowed
+{
+    var val1 = 5 // Allowed
+}
+
+// let can reassign
+var val2 = 3
+val2 = 4
+console.log(val2)
+
+// let can't hoisted
+console.log(val3);    // output: Error
+var val3 = 2;
+console.log(val3);
+
+/*const
+const can't reassign
+const can't redeclare
+const can't hoisted 
+const can't binds this
+const has no scope
+*/
+
+
+// const can't reassign
+const num0 = 8;
+num0 = 3;      // This will give an error
+
+// const can't redeclare
+const num01 = 81;
+// const num01 = 81;  This will give error
+
 
 
 
