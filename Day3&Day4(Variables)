@@ -80,6 +80,9 @@ console.log(`Tax(10%):$${tax}`);
   </head>
 <body>
 <h3>Calculator</h3>
+    <script>
+        let calculation = '';
+    </script>
       <button
         onclick="
         calculation += '1';
