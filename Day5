@@ -1,0 +1,117 @@
+// Arrays are a ordered collection 
+let vehicles = ["Bus", "car", "Zeep"]
+        //        0      1       2
+
+// Array size is dynamic
+ vehicles = ["Bus", "car", "Zeep"]
+ vehicles.push("van")
+ console.log("dynamic array: ", vehicles)  //output: ["Bus", "car", "Zeep", "van"]
+
+
+// Array can hold the values of different types
+const mix = [1, 2.3, 3, "red"]
+console.log("array with diiferent types: ", mix)
+
+// Accessing array elements
+
+let pets = ["Dog", "Cat", "Cow"]
+console.log(pets)
+console.log("index 0: ", pets[0])
+console.log("index -1:", pets[-1])  // output: undefined
+console.log("index 2: ", pets[2])
+console.log("----------------------------------------")
+
+
+// Basic array methods:
+  console.log("Basic array methods");
+
+// length() : length of th array
+    const cars = ["volvo", "Mahindra", "Swift"];
+    console.log("Length of cars: ", cars.length);
+
+                                                                                              //  converts
+// toString() : converts array format to comma seperated values [ 'volvo', 'Mahindra', 'Swift' ]------------>volvo,Mahindra,Swift
+    pets = ["cat", "cow", "dog"]
+    console.log("toString method: ", pets.toString());
+
+// at(index): prints the value according to the index
+    let laptops = ["HP", "lenovo", "Dell", "Apple"]    
+    console.log("at method: ", laptops.at(3))
+
+
+/*push(): pushes method returns the new array length and 
+        adds the element at the end*/
+    laptops = ["HP", "lenovo", "Dell", "Apple"];
+    console.log("Before push method: ", laptops);
+    laptops.push("Samsung");
+    console.log("After push method: ", laptops);
+
+/* pop(): pop method returns the value that poped out and 
+        pops the element at the end      */
+    console.log("Array Before poping: ", laptops)
+    const laptop = laptops.pop()
+    console.log("element which is poped out: ", laptop)
+    console.log("Array after poping the element: ", laptops)
+
+// join(): joins the array elements into a string with seperator
+    console.log("Before join method: ", laptops)
+    console.log("After join method: ", laptops.join('*'))
+
+/* shift(): shift method removes the first array element and shift the elements to lower index
+            returns the shifted out element*/
+
+    const fruits = ["Apple", "Banana", "Orange", "Mango"]
+    console.log("Before shift method: ", fruits)
+    console.log("Shifted out element: ", fruits.shift())
+    console.log("After shift method:", fruits)
+
+/* unshift(): unshift adds the element at the starting of the array
+            returns the array length after unshifting    */
+    let colours = ["red", "blue", "green", "pink"]
+    console.log("Before unshifting:", colours)
+    console.log("returning the array length after unshifting: ",colours.unshift("black") )
+    console.log("After unshifting: ", colours)
+
+/* Array sort methods:
+   Alphabetic sort: sort(), tosorted(), reverse(), toreversed()
+   Numeric sort: Numeric sort(), Random Sort(), Math.min(), Math.max(), Home made Min(), Home made Max()
+*/
+
+/*Alphabetic sort
+ sort(): sort method sorts an array alphabetically
+ sort method alters the original array*/
+ const colours = ["Red", "Blue", "Pink"];
+ console.log("Before sort: ", colours);
+ colours.sort();
+ console.log("After sort:", colours);
+
+
+ /*
+ tosorted(): tosorted method as a safe way to sort an array alphabetically  
+ tosorted creates the new array without altering the original array*/ 
+let months = ["mar", "apr", "jan", "dec"];
+console.log("Before toSorting: ", months);
+const month = months.toSorted();
+console.log("After toSorting: ", month);
+
+/* reverse(): reverse method reverses the elements in an array
+alters the original array*/
+console.log("Before reverse method: ", months);
+console.log("After reverse method: ", months.reverse());
+
+/* toReversed(): toreverse method is a safe to way to reverse the elements in the array
+  creates a new array without altering the original array    */
+let Birds = ["crow", "Owl", "Parrot"];
+const Bird = Birds.toReversed();
+console.log("toReversed method: ", Birds);
+
+
+
+
+ 
+
+
+
+
+
+
