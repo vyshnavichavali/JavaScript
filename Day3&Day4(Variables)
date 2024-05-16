@@ -120,6 +120,7 @@ console.log(`Tax(10%):$${tax}`);
 </html>
 
 //  Difference between var, let and const
+
 /*var is nothing but variable 
 var can reassign
 var can redeclare
@@ -159,20 +160,20 @@ console.log(val);    // output: 2
 
 // let cannot be redclare but can redecalre in another block
 
-var val1 = 3  // Allowed
-var val1 = 4 // Not Allowed
+let val = 3 ; // Allowed
+let val = 4 ; // Not Allowed
 {
-    var val1 = 5 // Allowed
+    let val= 5 // Allowed
 }
 
 // let can reassign
-var val2 = 3
+let val2 = 3
 val2 = 4
 console.log(val2)
 
 // let can't hoisted
 console.log(val3);    // output: Error
-var val3 = 2;
+let val3 = 2;
 console.log(val3);
 
 /*const
@@ -191,6 +192,11 @@ num0 = 3;      // This will give an error
 // const can't redeclare
 const num01 = 81;
 // const num01 = 81;  This will give error
+
+
+
+
+
 
 
 
