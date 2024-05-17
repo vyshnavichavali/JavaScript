@@ -72,6 +72,92 @@ console.log("----------------------------------------")
     console.log("returning the array length after unshifting: ",colours.unshift("black") )
     console.log("After unshifting: ", colours)
 
+// delete(): ! delete leaves the undefined holes in the array (use pop() and shift() instead)
+   console.log(colours)  // output: [ 'black', 'red', 'blue', 'green', 'pink' ]
+   delete colours[1]
+   console.log(colours)  // output: [ 'black', <1 empty item>, 'blue', 'green', 'pink' ]
+   console.log(colours[1])  // output: undefined
+
+
+/* concat(): concat is used to merge the arrays and merge the value with arrays
+             creates the new array without altering the existing array*/
+  const arr1 = ["red", "blue", "green"]
+  const arr2 = ["goa", "pineapple", "mango"]
+  const arr3 = arr1.concat(arr2)
+  console.log("merging 2 arrays: ", arr3)
+
+  const arr4 = ["cow", "cat", "dog"]
+  const arr = arr4.concat(arr1, arr2)
+  console.log("merging 3 arrays: ", arr)
+
+  const arr5 = arr4.concat("goat")
+  console.log("merging an array with value: ", arr5)
+  
+/* copyWithin():  
+                
+*/
+const girls = ["sita", "riya", "priya", "rita"];
+const stud = girls.copyWithin(0, 2);
+console.log(stud);
+
+
+// flat(): flat method creates the new array with sub array elements in th array
+    // flat(depth) depth is optional
+let num = [[1,2], [3, 4], [5, 6]]
+const newnum = num.flat()
+console.log(newnum)  // output: [ 1, 2, 3, 4, 5, 6 ]
+
+
+num = [2, 3,[4, 2,[3, 4]],[1,2], [3, 4], [5, 6]]
+let num1 = num.flat()
+console.log(num1)  // output: [ 2, 3, 4, 2, [ 3, 4 ], 1, 2, 3, 4, 5, 6 ]
+
+// splice(): splice method adds the new elements to the array
+
+let vehicle = ["Car", "Zeep", "Van"];
+vehicle.splice(2,0,"Bike", "Bus");
+console.log("splice method: ", vehicle);
+//  splice can also remove the elements from the array and does not leaves any holes in the array
+console.log(vehicle);  // output: [ 'Car', 'Zeep', 'Bike', 'Bus', 'Van' ]
+vehicle.splice(0,3);
+console.log(vehicle);  // output:  [ 'Bus', 'Van' ]
+
+/* toSpliced(): toSpliced method is same as splice but
+ it creates the new arrray without altering the original array */
+
+laptops = ["Hp", "Lenovo", "Dell"];
+const lapi = laptops.toSpliced(2, 0, "Samsung", "Apple", "Acer");
+console.log("toSpliced method: ", lapi);
+
+//  toSpliced can also remove the elements from the array and does not leaves any holes in the array
+console.log(lapi); 
+new_lapi = lapi.toSpliced(0,1);
+console.log(new_lapi);  
+new_lapi = lapi.toSpliced(0,2);
+console.log(new_lapi);  
+new_lapi = lapi.toSpliced(1,2);
+console.log(new_lapi);  
+new_lapi = lapi.toSpliced(2,4);
+console.log(new_lapi);  
+new_lapi = lapi.toSpliced(2,0);
+console.log(new_lapi);  
+new_lapi = lapi.toSpliced(2,1);
+console.log(new_lapi);  
+
+
+// slice():  slice method slices out a piece of array into new array
+const months = ["jan", "Feb", "Mar", "Apr", "May", "Jun"];
+new_month = months.slice(4);
+console.log(new_month);
+new_month = months.slice(2);
+console.log(new_month);
+// The slice() method can take two arguments like slice(1, 3)
+// The method then selects elements from the start argument, and up to (but not including) the end argument.
+new_month = months.slice(3, 5); 
+console.log(new_month);
+new_month = months.slice(2, 4);
+console.log(new_month);
+
 /* Array sort methods:
    Alphabetic sort: sort(), tosorted(), reverse(), toreversed()
    Numeric sort: Numeric sort(), Random Sort(), Math.min(), Math.max(), Home made Min(), Home made Max()
@@ -105,6 +191,32 @@ let Birds = ["crow", "Owl", "Parrot"];
 const Bird = Birds.toReversed();
 console.log("toReversed method: ", Birds);
 
+
+// map, filter, reduce and forEach methods
+//  map(): map method creates a new array by applying function on each element in the original array
+        //   doesnot change the original array
+const numbers = [1, 2, 3, 4]
+const double= numbers.map(num => num*2)
+console.log(double)
+
+/* filter(): filter method creates a new array filled with the elements which passes the test provided 
+by function*/
+const val = [3, 4, 5, 6, 8]
+const evennum = val.filter(val1=>val1%2===0)
+console.log(evennum)
+
+// reduce(): reduce method returns a single value
+const num1 = [2, 4, 5, 6];
+const newnum = num1.reduce((acc,num) => acc+num, 10);
+console.log(newnum);
+
+const num2 = [2, 4, 5, 6];
+const newnum2 = num1.reduce((acc,num) => acc+num, 0);
+console.log(newnum2);
+
+//foreach(): foreach method calls the function for each element in the array
+const fruits = ["Apple", "Banana", "orange"]
+fruits.forEach(fruit=>console.log(fruit))
 
 
 
