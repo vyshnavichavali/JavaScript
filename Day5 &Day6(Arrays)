@@ -218,6 +218,136 @@ console.log(newnum2);
 const fruits = ["Apple", "Banana", "orange"]
 fruits.forEach(fruit=>console.log(fruit))
 
+// String and its methods
+/*
+All string methods creates a new string without altering a original string
+Strings are immutable: strings cannot be changed only we can replace
+*/
+
+
+// string length: Returns the length of the string
+let str1 = "vyshu"
+console.log(str1.length)
+
+/* There 4 methods to extracting string characters
+at position: Returns a character at specified index in a string ES2022 introduced at
+charAt positon : Returns a character at specified index in a string
+charCodeAt position: Returns code of the character at specified index in a string
+this method returns the UTF-16 (number 0 - 65535)
+using property access like arrays[]:  It makes string look like an array but it is not
+If no charcter is found it returns undefined  
+*/
+
+let text = "Welcome to JavaScript"
+console.log(text.charAt(3))
+// console.log(charAt(-3)) // It do not allow negative indexes (Error)
+console.log(text.at(1))
+console.log(text.at(-2)) // allows negative indexes
+console.log(text.charCodeAt(7))
+console.log(text.charCodeAt(-7)) // If we given negative output will be NaN
+console.log(text[5])  
+console.log(text[-1]) // If there is no character found or if we givwn negative index it returns undefined
+
+/* There are 3 methods to extract part of a string
+slice(start, end)
+substr(start, length)
+substring(start, end)
+*/
+// slice(start, end): extracts the part of the string and returns the extracted part in new string
+text = "Hello World"
+const part = text.slice(0,4) 
+console.log(part)
+
+// substr: substr is same as slice the difference is the second parameter specifies the length of extracted string
+const part2 = text.substr(3, 4)
+console.log(part2)
+const part3 = text.substr(-3) // It returns last 3 chars
+console.log(part3)
+
+// substring: The start and end values lessthan 0 treated as 0  
+const part1 = text.substring(3,7) 
+console.log(part1)
+const part4 = text.substring(-4,-9)  
+console.log(part4)
+const part5 = text.substring(3)  // If we omit the second parameter it slice out the rest of the string
+console.log(part5)
+
+/*
+toUpperCase: Converts to uppercase to lowercase 
+toLowerCase: Converts lowercase to uppercase
+ */
+// toUpperCase:If it is already in uppercase doesnot changes
+text = "Happy Coders"
+const res = text.toUpperCase()
+console.log(res)
+//toLowerCase:If it is already in lowercase doesnot changes
+const res1 = text.toLowerCase()
+console.log(res1)
+
+// concat: concat and + both are same
+firstName = "vyshu";
+lastName = "chavali";
+fullName = firstName.concat(" ", lastName);
+console.log(fullName);
+console.log(firstName + " " + lastName);
+
+
+//trim: trim remove spaces from both sides of a string
+text = "      vyshu..     ";
+console.log("Before trim: ", text);
+console.log("After trim:", text.trim());
+
+//trimstart: trim start is same as trim but removes whitespace at start of the string
+text = "     riya....     ";
+console.log("Before trimStart: ", text);
+console.log("After trimStart:", text.trimStart());
+
+//trimEnd: trimEnd is same as tirm but removes whitespace at the end of the string
+text = "     riya....     ";
+console.log("Before trimEnd: ", text);
+console.log("After trimEnd:", text.trimEnd());
+
+/*
+  padding: padStart , padEnd
+  padStart(): pasStart pads the string from start
+  It pads a string with another string until it reaches a specified length
+*/
+let num = 2
+let txt = num.toString()
+let pad = txt.padStart(7, 5) // par2 is for string to pad par1 if for length it includes original str
+console.log(pad)
+pad = txt.padStart(7, "F")
+console.log(pad)
+// padEnd: padEnd pads the string at the end 
+pad = txt.padEnd(5, 0)
+console.log(pad)
+pad = txt.padEnd(5, "e")
+console.log(pad)
+
+/* repeat(): repeat methods returns string with no.of copies it creats the new string wihout altering the original string 
+syntax: string.repeat(count)
+*/
+txt = "Hi"
+const newtxt = txt.repeat(3)
+console.log(newtxt)
+
+/*
+ replace(): replaces the specified value with another value
+            replace is case-senstive
+            to make case-insensitive use regexp 
+ */
+let val = "Hi My Name is Vyshu and Vyshu is a nickname"
+console.log("Before replacing ", val)
+const newval = val.replace("Vyshu", "Vyshnavi")
+console.log("After replacing ", newval)
+// replace method with regexp(to make case-insensitive)
+const newval1 = val.replace(/VYSHU/i, "Vyshnavi")  // i for insensitive
+console.log("With RegExp 'i' ", newval1)
+const newval2 = val.replace(/Vyshu/g, "Vyshnavi")   // g for globalmatch(to replace all matches )
+console.log("With RegExp 'g' ", newval2)
+
+
+
 
 
  
